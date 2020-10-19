@@ -1,0 +1,8 @@
+.service-card{
+    border: none;
+}
+.service-card:hover{
+    box-shadow: 8px 8px 15px lightgrey, -8px -8px 15px lightgrey;
+    border-radius: 12px;
+    cursor: pointer;
+}

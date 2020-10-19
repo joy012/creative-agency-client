@@ -1,0 +1,38 @@
+
+.nav-link{
+    margin: 0 0.3rem!important;
+    color: black!important;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.login-btn{
+    font-size: 1.1rem;
+    margin: auto;
+}
+.logo{
+    width: 20%;
+}
+
+
+@media screen and (max-width:991px)
+{
+    .login-btn{
+        width: 40%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 768px){
+    .logo{
+        width: 25%;
+    }
+}
+@media screen and (max-width: 576px){
+    .logo{
+        width: 30%;
+    }
+}
+@media screen and (max-width: 450px){
+    .logo{
+        width: 40%;
+    }
+}
