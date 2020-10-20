@@ -36,10 +36,10 @@ const ClientsFeedback = () => {
                                 <div className="card h-100">
                                     <div className="card-body text-center">
                                         <div className="row">
-                                            <div className='col-sm-4 align-self-center px-3'>
-                                                <img className="w-100 my-4" src={review.img} alt="error" />
+                                            <div className='col-4 align-self-center px-3'>
+                                                <img className="img-fluid img my-4" src={review.img} alt="error" />
                                             </div>
-                                            <div className="col-sm-7 align-self-center text-left px-0">
+                                            <div className="col-7 align-self-center px-0 text-left">
                                                 <h5 className="card-title">{review.name}</h5>
                                                 <h6 className="card-title">{review.company}</h6>
                                             </div>

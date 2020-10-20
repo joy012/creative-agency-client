@@ -5,7 +5,7 @@ import './ServiceCard.css';
 
 const ServiceCard = ({ service }) => {
     return (
-        <div className="col-md-4">
+        <div className="col-md-4 mt-4">
             <Link to='/getService' style={{textDecoration: 'none', color: 'black'}}>
                 <div className="service-card card h-100">
                     <div className="card-body text-center">
