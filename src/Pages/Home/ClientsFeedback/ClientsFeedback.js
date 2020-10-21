@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 
 
 const ClientsFeedback = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('https://creative-agency-spa.herokuapp.com/review')
@@ -10,6 +12,7 @@ const ClientsFeedback = () => {
                 setReviews(data);
             })
     }, [])
+
     return (
         <div className='container py-5 mb-5'>
             <h2 className='text-center pb-5'>Clients <span style={{ color: '#7AB259' }}>Feedback</span></h2>
@@ -28,7 +31,7 @@ const ClientsFeedback = () => {
                                 <div className="card-body text-center">
                                     <div className="row">
                                         <div className='col-4 align-self-center px-3'>
-                                            <img className="img-fluid img my-4" src={`data:image/png;base64,${review.image.img}`} alt="" />
+                                        <img className="w-100 rounded-circle my-4" src={review.image} alt="" />
                                         </div>
                                         <div className="col-7 align-self-center px-0 text-left">
                                             <h5 className="card-title">{review.name}</h5>
