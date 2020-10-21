@@ -26,6 +26,7 @@ const Admin = () => {
                         <Link to='/admin' className="my-4 text-dark"><i class="fas fa-suitcase"></i> Service List</Link>
                         <Link to='/admin/addService' className="mb-4 text-dark"><i class="fas fa-plus"></i> Add Service</Link>
                         <Link to='/admin/addAdmin' className="text-dark"><i class="fas fa-user-plus"></i> Make Admin</Link>
+                        <Link to='/' className="text-dark"><i class="fas fa-arrow-left"></i> Home</Link>
                     </nav>
                 </div>
                 <div className="col-sm-9 p-0 p-md-5" style={{ backgroundColor: "#F4F7FC", borderRadius: '16px' }}>
