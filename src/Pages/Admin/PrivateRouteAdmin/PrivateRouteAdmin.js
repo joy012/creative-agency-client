@@ -8,7 +8,7 @@ const PrivateRouteAdmin = ({ children, ...rest }) => {
         <Route
       {...rest}
       render={({ location }) =>
-        (loggedInUser.role === 'admin' && (sessionStorage.getItem('token') && loggedInUser.email)) ? (
+        (loggedInUser.role === 'admin' && (sessionStorage.getItem('token') || loggedInUser.email)) ? (
           children
         ) : (
           <Redirect

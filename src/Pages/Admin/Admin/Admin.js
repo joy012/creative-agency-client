@@ -25,7 +25,7 @@ const Admin = () => {
                     <nav className="nav flex-column align-items-center my-5 ml-auto">
                         <Link to='/admin' className="my-4 text-dark"><i class="fas fa-suitcase"></i> Service List</Link>
                         <Link to='/admin/addService' className="mb-4 text-dark"><i class="fas fa-plus"></i> Add Service</Link>
-                        <Link to='/admin/addAdmin' className="text-dark"><i class="fas fa-user-plus"></i> Make Admin</Link>
+                        <Link to='/admin/addAdmin' className="mb-4 text-dark"><i class="fas fa-user-plus"></i> Make Admin</Link>
                         <Link to='/' className="text-dark"><i class="fas fa-arrow-left"></i> Home</Link>
                     </nav>
                 </div>
