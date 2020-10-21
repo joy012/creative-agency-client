@@ -4,10 +4,10 @@ const ContactForm = () => {
     return (
         <form>
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Your email address" />
+                <input type="text" class="form-control" id="inputPassword" placeholder="Your email address" />
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Your name/ company's name" />
+                <input type="text" class="form-control" id="inputPassword" placeholder="Your name/ company's name" />
             </div>
             <div class="form-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Your message..."></textarea>

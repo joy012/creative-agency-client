@@ -1,53 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import client1 from '../../../images/customer-1.png';
-import client2 from '../../../images/customer-2.png';
-import client3 from '../../../images/customer-3.png';
+import React, { useEffect, useState } from 'react';
 
-const clientsReview = [
-    {
-        img: client1,
-        name: 'Nash Patrik',
-        company: 'CEO,Manpol',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo autem alias nihil, adipisci molestiae. Reiciendis quidem totam labore debitis!'
-    },
-    {
-        img: client2,
-        name: 'Miriam Barron',
-        company: 'CEO,Manpol',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo autem alias nihil, adipisci molestiae. Reiciendis quidem totam labore debitis!'
-    },
-    {
-        img: client3,
-        name: 'Bria Manlone',
-        company: 'CEO, Manpol',
-        comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nemo autem alias nihil, adipisci molestiae. Reiciendis quidem totam labore debitis!'
-    },
-]
+
 const ClientsFeedback = () => {
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch('https://creative-agency-spa.herokuapp.com/review')
+            .then(res => res.json())
+            .then(data => {
+                setReviews(data);
+            })
+    }, [])
     return (
         <div className='container py-5 mb-5'>
             <h2 className='text-center pb-5'>Clients <span style={{ color: '#7AB259' }}>Feedback</span></h2>
             <div className="row">
                 {
-                    clientsReview.map(review =>
+                    !reviews.length &&
+                    <div class="d-flex align-items-center">
+                        <strong>Loading...</strong>
+                        <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                    </div>
+                }
+                {
+                    reviews.map(review =>
                         <div className="col-lg-4 col-md-6 mt-4">
-                            <Link to='/getService' style={{ textDecoration: 'none', color: 'black' }}>
-                                <div className="card h-100">
-                                    <div className="card-body text-center">
-                                        <div className="row">
-                                            <div className='col-4 align-self-center px-3'>
-                                                <img className="img-fluid img my-4" src={review.img} alt="error" />
-                                            </div>
-                                            <div className="col-7 align-self-center px-0 text-left">
-                                                <h5 className="card-title">{review.name}</h5>
-                                                <h6 className="card-title">{review.company}</h6>
-                                            </div>
+                            <div className="card h-100">
+                                <div className="card-body text-center">
+                                    <div className="row">
+                                        <div className='col-4 align-self-center px-3'>
+                                            <img className="img-fluid img my-4" src={`data:image/png;base64,${review.image.img}`} alt="" />
                                         </div>
-                                        <p className="card-text text-muted">{review.comment}</p>
+                                        <div className="col-7 align-self-center px-0 text-left">
+                                            <h5 className="card-title">{review.name}</h5>
+                                            <h6 className="card-title">{review.company}</h6>
+                                        </div>
                                     </div>
+                                    <p className="card-text text-muted">{review.review}</p>
                                 </div>
-                            </Link>
+                            </div>
                         </div>
                     )
                 }

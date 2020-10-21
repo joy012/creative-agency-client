@@ -1,0 +1,11 @@
+.status-btn{
+    background-color: #FFE3E3;
+    color: #FF4545;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+.serviceList-card{
+    border: none;
+    border-radius:20px;
+}
