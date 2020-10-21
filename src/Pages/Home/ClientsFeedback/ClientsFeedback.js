@@ -1,9 +1,7 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../App';
+import React, {  useEffect, useState } from 'react';
 
 
 const ClientsFeedback = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('https://creative-agency-spa.herokuapp.com/review')
