@@ -5,13 +5,12 @@ import { UserContext } from '../../../App';
 const CustomerReview = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [review, setReview] = useState({});
-    const [file, setFile] = useState(null);
 
     const handleReview = (e) => {
         const userReview = {...review};
         userReview.image = loggedInUser.img;
         setReview(userReview);
-        
+
         fetch('https://creative-agency-spa.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
