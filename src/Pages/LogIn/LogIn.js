@@ -62,7 +62,7 @@ const LogIn = () => {
                     <p className='mt-2'>Don't have an account? <Link to='/login'>create an account</Link></p>
                 </div>
             </div>
-            <button className='btn btn-dark text-white mx-auto d-block my-5'> Go Home</button>
+            <Link to='/' className='btn btn-dark text-white mx-auto d-block my-5'> Go Home</Link>
         </div>
     );
 };
