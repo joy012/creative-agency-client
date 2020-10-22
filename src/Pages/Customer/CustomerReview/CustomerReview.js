@@ -7,10 +7,6 @@ const CustomerReview = () => {
     const [review, setReview] = useState({});
 
     const handleReview = (e) => {
-        const userReview = {...review};
-        userReview.image = loggedInUser.img;
-        setReview(userReview);
-
         fetch('https://creative-agency-spa.herokuapp.com/addReview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
@@ -28,9 +24,10 @@ const CustomerReview = () => {
     const handleBlur = e => {
         const newInfo = { ...review };
         newInfo[e.target.name] = e.target.value;
+        newInfo.image = loggedInUser.img;
         setReview(newInfo);
     }
-
+    
     return (
         <form onSubmit={handleReview} className='w-75 mx-auto mx-sm-0 mt-4 px-2 px-sm-3 px-md-5 text-dark'>
             <div className="form-group">
