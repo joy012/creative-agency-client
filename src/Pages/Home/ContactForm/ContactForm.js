@@ -12,7 +12,7 @@ const ContactForm = () => {
             <div class="form-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Your message..."></textarea>
             </div>
-            <input className='btn btn-dark px-5' type="submit" value="Send" />
+            <button className='btn btn-dark px-5'>Send</button>
         </form>
     );
 };

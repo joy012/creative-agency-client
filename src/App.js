@@ -4,12 +4,10 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Admin from './Pages/Admin/Admin/Admin';
-import PrivateRouteAdmin from './Pages/Admin/PrivateRouteAdmin/PrivateRouteAdmin';
-import Customer from './Pages/Customer/Customer/Customer';
-import PrivateRouteCustomer from './Pages/Customer/PrivateRouteCustomer/PrivateRouteCustomer';
 import Home from './Pages/Home/Home/Home';
 import LogIn from './Pages/LogIn/LogIn';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import DashBoard from './Pages/DashBoard/DashBoard/DashBoard';
 
 
 export const UserContext = createContext();
@@ -57,12 +55,9 @@ function App() {
           <Route path='/login'>
             <LogIn />
           </Route>
-          <PrivateRouteCustomer path='/customer'>
-            <Customer />
-          </PrivateRouteCustomer>
-          <PrivateRouteAdmin path='/admin'>
-            <Admin />
-          </PrivateRouteAdmin>
+          <PrivateRoute to='/dashBoard'>
+            <DashBoard/>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>

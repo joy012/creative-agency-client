@@ -13,7 +13,7 @@ const ServiceCard = ({ service }) => {
     }
     return (
         <div className="col-md-4 mt-4">
-            <Link to='/customer' style={{textDecoration: 'none', color: 'black'}}>
+            <Link to='/dashBoard' style={{textDecoration: 'none', color: 'black'}}>
                 <div onClick={() => handleService(service.service)} className="service-card card h-100">
                     <div className="card-body text-center">
                         <div>

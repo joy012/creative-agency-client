@@ -29,11 +29,11 @@ const ClientsFeedback = () => {
                                 <div className="card-body text-center">
                                     <div className="row">
                                         <div className='col-4 align-self-center px-3'>
-                                        <img className="w-100 rounded-circle my-4" src={review.image} alt="" />
+                                        <img className="w-75 rounded-circle my-4" src={review.image} alt="" />
                                         </div>
                                         <div className="col-7 align-self-center px-0 text-left">
-                                            <h5 className="card-title">{review.name}</h5>
-                                            <h6 className="card-title">{review.company}</h6>
+                                            <h5 className="card-title font-weight-bold">{review.name}</h5>
+                                            <h6 className="font-weight-bold small">{review.company}</h6>
                                         </div>
                                     </div>
                                     <p className="card-text text-muted">{review.review}</p>

@@ -31,21 +31,23 @@ const CustomerServiceList = () => {
                 }
                 {
                     myOrder.map((order) =>
-                        <div className="col-sm-6 pr-0 mt-3">
+                        <div className="col-sm-6 pr-0 mt-3 card-container">
                             <div className="serviceList-card card h-100 w-100">
                                 <div className="card-body">
                                     <div className="row align-items-center">
-                                        <div className='col-md-4 px-3'>
+                                        <div className='col-md-5 px-3'>
                                             <img className="w-100 my-4" src={`data:image/png;base64,${order.image.img}`} alt="" />
                                         </div>
                                         <div className="col-md-7 px-0 text-right">
-                                            <button className="status-btn d-block mx-auto text-center my-4">{order.status}</button>
+                                            <button className="status-btn d-block mx-auto text-center my-4" disabled>{order.status}</button>
                                         </div>
                                     </div>
                                     <h5 className="card-title my-3">{order.service}</h5>
-                                    <p className="card-text text-muted pb-3">{order.details}</p>
-                                    <p className="card-text py-3">Price: {order.price}TK</p>
+                                    <p className="card-text text-muted">{order.details}</p>
                                 </div>
+                                <div class="card-footer">
+                                        <p className="card-text">Price: {order.price}TK</p>
+                                    </div>
                             </div>
                         </div>
                     )
