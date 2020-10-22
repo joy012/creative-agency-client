@@ -1,8 +1,12 @@
 import React from 'react';
 
 const ContactForm = () => {
+    const handleSubmit = e => {
+        e.target.reset();
+        e.preventDefault();
+    }
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <div class="form-group">
                 <input type="text" class="form-control" id="inputPassword" placeholder="Your email address" />
             </div>
@@ -12,7 +16,7 @@ const ContactForm = () => {
             <div class="form-group">
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" placeholder="Your message..."></textarea>
             </div>
-            <button className='btn btn-dark px-5'>Send</button>
+            <input type='submit' className='btn btn-dark px-5' value='Send'/>
         </form>
     );
 };
