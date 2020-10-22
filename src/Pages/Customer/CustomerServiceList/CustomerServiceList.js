@@ -44,6 +44,7 @@ const CustomerServiceList = () => {
                                     </div>
                                     <h5 className="card-title my-3">{order.service}</h5>
                                     <p className="card-text text-muted pb-3">{order.details}</p>
+                                    <p className="card-text py-3">Price: {order.price}TK</p>
                                 </div>
                             </div>
                         </div>

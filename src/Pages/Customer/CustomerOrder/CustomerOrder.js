@@ -51,7 +51,7 @@ const CustomerOrder = () => {
                 <input onBlur={handleBlur} type="text" name='service' className="form-control bg-white" placeholder='service name' value={loggedInUser.serviceName} />
             </div>
             <div className="form-group">
-                <textarea onBlur={handleBlur} name='details' className="form-control" rows="4" placeholder="Project Details..." value={loggedInUser.details}></textarea>
+                <textarea onBlur={handleBlur} name='details' className="form-control" rows="4" placeholder="Project Details..."></textarea>
             </div>
             <div className="row align-items-center">
                 <div className="col-sm-6 col-12">

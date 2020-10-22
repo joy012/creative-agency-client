@@ -9,13 +9,12 @@ const ServiceCard = ({ service }) => {
     const handleService = (name, detail) => {
         const updateUser = {...loggedInUser};
         updateUser.serviceName = name;
-        updateUser.details = detail;
         setLoggedInUser(updateUser);
     }
     return (
         <div className="col-md-4 mt-4">
             <Link to='/customer' style={{textDecoration: 'none', color: 'black'}}>
-                <div onClick={() => handleService(service.service, service.description)} className="service-card card h-100">
+                <div onClick={() => handleService(service.service)} className="service-card card h-100">
                     <div className="card-body text-center">
                         <div>
                             <img className="w-25 my-4" src={`data:image/png;base64,${service.image.img}`} alt=""/>
