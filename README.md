@@ -2,8 +2,8 @@
 
 [Website](https://creative-agency-spa.firebaseapp.com/)
 
-A full-stack service-oriented agency app where we can take different services
-on development and design. You can have service of your customized design and also can give review.
+A react-based full-stack agency app where a user can take different services
+on development and design. User can have service on customized design and also can give review.
 
 ### Features:
 - Firebase authentication is used for login purpose.
@@ -14,6 +14,6 @@ on development and design. You can have service of your customized design and al
 
 
 ### Technology used:
-- Front End: React.js, Javascript, ES6, HTML, CSS, Bootstrap, React Router
-- Back End: Node.js, Express.js, MongoDB
-- Tools: GitHub, Firebase, Heroku
+- **Front End:** React.js, Javascript, ES6, HTML, CSS, Bootstrap, React Router
+- **Back End:** Node.js, Express.js, MongoDB
+- **Tools:** GitHub, Firebase, Heroku
