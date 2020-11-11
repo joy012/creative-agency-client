@@ -21,7 +21,7 @@ const Customer = () => {
                     <img src={logo} className="d-block w-50 mx-auto mx-sm-0" alt="" />
                 </div>
                 <div className='col-4 mx-auto mx-sm-0 text-center text-sm-left'>
-                    <h4 className="text-center">Order</h4>
+                    <h4 className="text-center">DashBoard</h4>
                 </div>
                 <div className='col-4 mx-auto mx-sm-0 text-center text-sm-left'>
                     <h5 className="text-right">{loggedInUser.name}</h5>
