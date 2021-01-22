@@ -23,7 +23,6 @@ const NavBar = () => {
                                 <Link className="nav-link" to='/'>Home</Link>
                                 <Link className="nav-link" to='/'>Our Portfolio</Link>
                                 <Link className="nav-link" to='/'>Our Team</Link>
-                                <Link className="nav-link" to='/'>Contact Us</Link>
                                 {
                                     loggedInUser.email? <Link className="nav-link" to='/dashBoard'>Dashboard</Link> : 
                                     <Link className='login-btn btn btn-dark px-4 text-white' to="/login">LogIn</Link>
